@@ -1,12 +1,8 @@
-"use client"
+"use client";
 
-import { Content } from "next/font/google";
-import Image from "next/image";
 import { handleContactForm } from "./actions";
 import { useActionState } from "react";
 import { useFormStatus } from "react-dom";
-
-
 
 export default function Home() {
   return (
@@ -116,7 +112,7 @@ function ProfileCard() {
           analytical and technical skills in real-world technology solution
         </h4>
         <button className="border-yellow-stroke border-2 font-ibm-plex-mono font-bold w-1/3 h-1/2 mb-7 hover:bg-amber-900 hover:cursor-pointer rounded-md">
-          Let's Get Started!
+          Lets Get Started!
         </button>
       </div>
       <div className="w-1/2">
@@ -355,7 +351,7 @@ function RecentWork() {
 }
 
 function GetInTouch() {
-  const { pending } = useFormStatus(); 
+  const { pending } = useFormStatus();
   const [state, formAction] = useActionState(handleContactForm, {
     success: false,
     error: null,
