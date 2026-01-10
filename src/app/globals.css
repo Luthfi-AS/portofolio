@@ -24,6 +24,7 @@
   --background-image-sentiment: url('/sentiment.png');
   --background-image-kahim: url('/foto-kahim.jpeg');
   --background-image-web: url('/web1.png');
+  --background-image-dataniaga: url('/dataniaga.png');
   --color-blue-icon: #1E2235;
   --color-gray-form: #272222;
   --spacing-scroll-offset: 6rem;
@@ -50,4 +51,8 @@ body {
 
 html {
   scroll-behavior: smooth;
+}
+
+html, body {
+  overflow-x: hidden;
 }
