@@ -5,7 +5,6 @@ import { useActionState } from "react";
 import { useFormStatus } from "react-dom";
 import { Reveal } from "@/components/Reveal";
 
-
 export default function Home() {
   return (
     <div>
@@ -65,7 +64,7 @@ function Navbar() {
             <img
               src={img.src}
               alt={img.alt}
-              className="w-6 h-6 object-contain" 
+              className="w-6 h-6 object-contain"
             />
           </a>
         ))}
@@ -373,7 +372,7 @@ function RecentWork() {
             performance.
           </p>
           <a
-            href="https://github.com/Luthfi-AS/computer-vision-based-rainfall-analysis"
+            href="https://github.com/hdans/DataNiaga"
             target="_blank"
             className="w-1/2"
           >
