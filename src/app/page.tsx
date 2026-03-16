@@ -4,6 +4,7 @@ import { handleContactForm } from "./actions";
 import { useActionState } from "react";
 import { useFormStatus } from "react-dom";
 import { Reveal } from "@/components/Reveal";
+import { div } from "framer-motion/m";
 
 export default function Home() {
   return (
@@ -90,6 +91,7 @@ function Contents() {
       <ProfileCard />
       <AboutMe />
       <RecentWork />
+      <AwardsAndAchievements />
       <GetInTouch />
     </main>
   );
@@ -304,8 +306,8 @@ function RecentWork() {
           <p className="text-gray-text font-ibm-plex-mono w-1/2">
             Sentiment Analysis Project — An NLP-based project that analyzes
             Indonesian product reviews to identify sentiment polarity and
-            uncover dominant discussion topics, successfully passing internal
-            university selection for GEMASTIK.
+            uncover dominant discussion topics from local and foreign brand
+            spesificly Advan and Xiaomi.
           </p>
         </div>
       </Reveal>
@@ -390,6 +392,38 @@ function RecentWork() {
       </Reveal>
 
       <Reveal>
+        <div id="project-cards5" className="flex gap-6 ml-20 mr-20">
+          <a
+            href="https://deqrypt.vercel.app/"
+            target="_blank"
+            className="w-1/2"
+          >
+            <div className="group relative w-full h-48 overflow-hidden rounded-xl">
+              <div className="bg-deqrypt absolute group-hover:cursor-pointer bg-cover bg-center inset-0 h-48 rounded-md group-hover:blur-md "></div>
+              <div className="relative flex items-center justify-center h-full">
+                <span className="text-black font-bold font-raleway opacity-0 translate-y-6  transition-all group-hover:opacity-100 group-hover:translate-y-0 text-2xl">
+                  DeQRypt - AI-Driven DeFi Payment Ecosystem
+                </span>
+              </div>
+            </div>
+          </a>
+
+          <p className="text-gray-text font-ibm-plex-mono w-1/2">
+            DeQRypt is an AI-driven DeFi payment ecosystem on the Base network
+            that simplifies crypto transactions through a "Scan-to-Pay" system
+            and natural language portfolio management powered by Google Gemini.
+            By integrating smart contract architecture with Account Abstraction
+            and AI reasoning, the platform enables users to automate yield
+            optimization and execute atomic payments without the usual
+            complexity of Web3. Developed by a team, the project aims to bridge
+            the gap between DeFi and daily life by offering a seamless,
+            mobile-friendly experience for both individual users and B2B
+            integrations.
+          </p>
+        </div>
+      </Reveal>
+
+      <Reveal>
         <h2 className="text-2xl text-white font-raleway font-bold mt-20">
           Tech Stacks
         </h2>
@@ -412,6 +446,59 @@ function RecentWork() {
               className="hover:cursor-pointer scale-100 border-gray-stroke  hover:scale-110 transition-transform border rounded-16 bg-blue-icon rounded-xl shadow-box "
             />
           ))}
+        </div>
+      </Reveal>
+    </div>
+  );
+}
+
+function AwardsAndAchievements() {
+  return (
+    <div id="awards" className="flex flex-col items-center mt-20 px-4 mb-20">
+      <Reveal>
+        <h1 className="text-3xl text-white font-abril-fatface font-bold mb-12 text-center">
+          Awards and Achievements
+        </h1>
+      </Reveal>
+
+      <Reveal>
+        {/* Menggunakan grid agar rapi di desktop (2 kolom) dan mobile (1 kolom) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-40 max-w-6xl w-full">
+          {/* Item 1: ANAVA */}
+          <div className="flex flex-col items-center md:items-start  bg-gray-box shadow-box rounded-md  p-6">
+            <p className="font-ibm-plex-mono text-white text-3xl text-center font-bold">
+              Datavers ANAVA #20 Universitas Gadjah Mada
+            </p>
+            <img
+              src="sertidatavers.jpg"
+              alt="Datavers Logo"
+              className="w-full h-auto mt-4 object-contain "
+            />
+            <p className="font-ibm-plex-mono text-gray-text mt-4 text-justify leading-relaxed">
+              This accomplishment involved competing against teams from diverse
+              universities nationwide, demonstrating strong analytical skills
+              and the ability to create classification models.
+            </p>
+          </div>
+
+          {/* Item 2: GEMASTIK */}
+          <div className="flex flex-col items-center md:items-start  bg-gray-box shadow-box rounded-md  p-6">
+            <p className="font-ibm-plex-mono text-white font-bold text-center text-3xl">
+              Padjadjaran University Delegate - GEMASTIK 2025
+            </p>
+            {/* Ganti src dengan logo gemastik jika ada */}
+            <img
+              src="sertigemastik.png"
+              alt="Gemastik Logo"
+              className="w-full h-auto mt-4 object-contain"
+            />
+            <p className="font-ibm-plex-mono text-gray-text mt-4 text-justify leading-relaxed">
+              Spearheaded the technical analysis and development of a sentiment
+              classification pipeline, including data scraping, modeling, and
+              visualization to derive data-driven conclusions for the GEMASTIK
+              2025 national competition.
+            </p>
+          </div>
         </div>
       </Reveal>
     </div>
