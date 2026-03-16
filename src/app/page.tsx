@@ -90,8 +90,8 @@ function Contents() {
     <main className="grid items-center">
       <ProfileCard />
       <AboutMe />
-      <RecentWork />
       <AwardsAndAchievements />
+      <RecentWork />
       <GetInTouch />
     </main>
   );
