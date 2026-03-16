@@ -410,7 +410,7 @@ function RecentWork() {
 
           <p className="text-gray-text font-ibm-plex-mono w-1/2">
             DeQRypt is an AI-driven DeFi payment ecosystem on the Base network
-            that simplifies crypto transactions through a "Scan-to-Pay" system
+            that simplifies crypto transactions through a Scan-to-Pay system
             and natural language portfolio management powered by Google Gemini.
             By integrating smart contract architecture with Account Abstraction
             and AI reasoning, the platform enables users to automate yield
